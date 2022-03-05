@@ -63,3 +63,7 @@ function handleWin() {
 
   buttons.forEach((e) => e.removeEventListener("click", handleButtonClick));
 }
+
+function capitalizeFirstLetter(string) {
+  return string.split("")[0].toUpperCase() + string.split("").slice(1).join("");
+}
