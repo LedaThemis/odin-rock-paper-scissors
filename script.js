@@ -22,6 +22,9 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const buttons = document.querySelectorAll("button");
+const resultsDiv = document.querySelector("#results-div");
+let playerScore = 0;
+let computerScore = 0;
 
 buttons.forEach((b) => b.addEventListener("click", handleButtonClick));
 
@@ -29,5 +32,17 @@ function handleButtonClick(e) {
   const playerSelection = e.target.attributes["data-key"].value;
   const computerSelection = computerPlay();
 
-  console.log(playRound(playerSelection, computerSelection));
+  game(playerSelection, computerSelection);
+}
+
+function game(playerSelection, computerSelection) {
+  const result = playRound(playerSelection, computerSelection);
+
+  if (result === "Player wins!") {
+    playerScore++;
+  } else if (result === "Computer wins!") {
+    computerScore++;
+  }
+
+  resultsDiv.innerText = `Current Score: ${playerScore}-${computerScore}`;
 }
