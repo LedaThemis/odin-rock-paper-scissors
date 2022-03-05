@@ -59,7 +59,7 @@ function game(playerSelection, computerSelection) {
 function handleWin() {
   if (playerScore === 5) {
     resultsDiv.innerText =
-      "Player won!" + ` with a score of ${playerScore}-${computerScore}`;
+      "You won!" + ` with a score of ${playerScore}-${computerScore}`;
   } else {
     resultsDiv.innerText =
       "Computer won!" + ` with a score of ${computerScore}-${playerScore}`;
