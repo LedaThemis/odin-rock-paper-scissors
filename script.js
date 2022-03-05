@@ -21,7 +21,7 @@ function playRound(playerSelection, computerSelection) {
   }
 }
 
-const playerSelection = "Rock";
+const playerSelection = prompt("Choose: (Rock, Paper, Scissors)");
 const computerSelection = computerPlay();
 
 console.log(playRound(playerSelection, computerSelection));
