@@ -58,11 +58,14 @@ function game(playerSelection, computerSelection) {
 
 function handleWin() {
   if (playerScore === 5) {
-    resultsDiv.innerText = "Player won!";
+    resultsDiv.innerText =
+      "Player won!" + ` with a score of ${playerScore}-${computerScore}`;
   } else {
-    resultsDiv.innerText = "Computer won!";
+    resultsDiv.innerText =
+      "Computer won!" + ` with a score of ${computerScore}-${playerScore}`;
   }
-
+  scoreDiv.innerText = "";
+  statusDiv.innerText = "";
   buttons.forEach((e) => e.removeEventListener("click", handleButtonClick));
 }
 
