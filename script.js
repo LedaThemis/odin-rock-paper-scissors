@@ -22,6 +22,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const buttons = document.querySelectorAll("button");
+const statusDiv = document.querySelector("#status-div");
 const scoreDiv = document.querySelector("#score-div");
 const resultsDiv = document.querySelector("#results-div");
 let playerScore = 0;
@@ -45,6 +46,7 @@ function game(playerSelection, computerSelection) {
     computerScore++;
   }
 
+  statusDiv.innerText = `You played ${playerSelection}, Computer played ${computerSelection}`;
   scoreDiv.innerText = `Current Score: ${playerScore}-${computerScore}`;
 
   if (playerScore === 5 || computerScore === 5) {
