@@ -22,6 +22,7 @@ function playRound(playerSelection, computerSelection) {
 }
 
 const buttons = document.querySelectorAll("button");
+const scoreDiv = document.querySelector("#score-div");
 const resultsDiv = document.querySelector("#results-div");
 let playerScore = 0;
 let computerScore = 0;
@@ -44,5 +45,5 @@ function game(playerSelection, computerSelection) {
     computerScore++;
   }
 
-  resultsDiv.innerText = `Current Score: ${playerScore}-${computerScore}`;
+  scoreDiv.innerText = `Current Score: ${playerScore}-${computerScore}`;
 }
