@@ -46,7 +46,9 @@ function game(playerSelection, computerSelection) {
     computerScore++;
   }
 
-  statusDiv.innerText = `You played ${playerSelection}, Computer played ${computerSelection}`;
+  statusDiv.innerText =
+    `You played ${capitalizeFirstLetter(playerSelection)},` +
+    ` Computer played ${capitalizeFirstLetter(computerSelection)}`;
   scoreDiv.innerText = `Current Score: ${playerScore}-${computerScore}`;
 
   if (playerScore === 5 || computerScore === 5) {
