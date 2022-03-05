@@ -20,3 +20,14 @@ function playRound(playerSelection, computerSelection) {
     return "Computer wins!";
   }
 }
+
+const buttons = document.querySelectorAll("button");
+
+buttons.forEach((b) => b.addEventListener("click", handleButtonClick));
+
+function handleButtonClick(e) {
+  const playerSelection = e.target.attributes["data-key"].value;
+  const computerSelection = computerPlay();
+
+  console.log(playRound(playerSelection, computerSelection));
+}
