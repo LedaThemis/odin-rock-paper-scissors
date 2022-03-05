@@ -3,5 +3,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  gap: 20px;
   height: 90vh;
 }
